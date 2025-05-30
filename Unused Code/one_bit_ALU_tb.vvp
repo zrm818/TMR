@@ -1,0 +1,177 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 10;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01013E80 .scope module, "one_bit_ALU_tb" "one_bit_ALU_tb" 2 5;
+ .timescale -9 -10;
+v01020CC0_0 .var "a", 0 0;
+v01020C68_0 .var "b", 0 0;
+v010204D8_0 .var "c_in", 0 0;
+v010208A0_0 .net "c_out", 0 0, L_01053B70; 1 drivers
+v01020320_0 .var "op", 1 0;
+v01020378_0 .net "result", 0 0, L_01053858; 1 drivers
+S_01013B50 .scope module, "uut" "one_bit_ALU" 2 13, 3 5, S_01013E80;
+ .timescale -9 -10;
+P_01022504 .param/l "op_add" 3 15, C4<00>;
+P_01022518 .param/l "op_and" 3 15, C4<01>;
+P_0102252C .param/l "op_not" 3 15, C4<10>;
+L_01053F68 .functor AND 1, v01020CC0_0, v01020C68_0, C4<1>, C4<1>;
+L_01053FA0 .functor NOT 1, v01020CC0_0, C4<0>, C4<0>, C4<0>;
+v0110AB98_0 .net *"_s10", 0 0, C4<0>; 1 drivers
+v0110AAE8_0 .net *"_s11", 1 0, L_01020FD8; 1 drivers
+v0110A9E0_0 .net *"_s13", 1 0, L_01020E20; 1 drivers
+v0110AD50_0 .net *"_s16", 0 0, C4<0>; 1 drivers
+v0110AF60_0 .net *"_s17", 1 0, L_01020ED0; 1 drivers
+v0110AE00_0 .net *"_s23", 2 0, L_010211E8; 1 drivers
+v0110AE58_0 .net *"_s26", 0 0, C4<0>; 1 drivers
+v0110AA90_0 .net *"_s27", 2 0, C4<000>; 1 drivers
+v0110AB40_0 .net *"_s29", 0 0, L_01021240; 1 drivers
+v0110A880_0 .net *"_s3", 1 0, L_01020E78; 1 drivers
+v0110ABF0_0 .net *"_s31", 2 0, L_01021030; 1 drivers
+v0110AA38_0 .net *"_s34", 0 0, C4<0>; 1 drivers
+v0110A8D8_0 .net *"_s35", 2 0, C4<001>; 1 drivers
+v01020BB8_0 .net *"_s37", 0 0, L_01021088; 1 drivers
+v01020A58_0 .net *"_s39", 3 0, L_010210E0; 1 drivers
+v01020690_0 .net *"_s42", 1 0, C4<00>; 1 drivers
+v01020D70_0 .net *"_s43", 3 0, C4<0010>; 1 drivers
+v01020AB0_0 .net *"_s45", 0 0, L_01021298; 1 drivers
+v01020B60_0 .net *"_s47", 0 0, C4<z>; 0 drivers
+v010209A8_0 .net *"_s49", 0 0, L_01020F28; 1 drivers
+v01020740_0 .net *"_s51", 0 0, L_01020F80; 1 drivers
+v01020480_0 .net *"_s55", 2 0, L_010538B0; 1 drivers
+v010206E8_0 .net *"_s58", 0 0, C4<0>; 1 drivers
+v01020848_0 .net *"_s59", 2 0, C4<000>; 1 drivers
+v01020588_0 .net *"_s6", 0 0, C4<0>; 1 drivers
+v01020DC8_0 .net *"_s61", 0 0, L_01053960; 1 drivers
+v01020428_0 .net *"_s63", 0 0, C4<z>; 0 drivers
+v01020798_0 .net *"_s7", 1 0, L_01021190; 1 drivers
+v01020A00_0 .net "a", 0 0, v01020CC0_0; 1 drivers
+v010208F8_0 .net "add_wire", 0 0, L_01021138; 1 drivers
+v01020C10_0 .net "and_wire", 0 0, L_01053F68; 1 drivers
+v010205E0_0 .net "b", 0 0, v01020C68_0; 1 drivers
+v01020638_0 .net "c_in", 0 0, v010204D8_0; 1 drivers
+v01020950_0 .alias "c_out", 0 0, v010208A0_0;
+v01020D18_0 .net "c_out_wire", 0 0, L_01020530; 1 drivers
+v01020B08_0 .net "not_wire", 0 0, L_01053FA0; 1 drivers
+v010207F0_0 .net "op", 1 0, v01020320_0; 1 drivers
+v010203D0_0 .alias "result", 0 0, v01020378_0;
+L_01020530 .part L_01020ED0, 1, 1;
+L_01021138 .part L_01020ED0, 0, 1;
+L_01020E78 .concat [ 1 1 0 0], v01020CC0_0, C4<0>;
+L_01021190 .concat [ 1 1 0 0], v01020C68_0, C4<0>;
+L_01020FD8 .arith/sum 2, L_01020E78, L_01021190;
+L_01020E20 .concat [ 1 1 0 0], v010204D8_0, C4<0>;
+L_01020ED0 .arith/sum 2, L_01020FD8, L_01020E20;
+L_010211E8 .concat [ 2 1 0 0], v01020320_0, C4<0>;
+L_01021240 .cmp/eq 3, L_010211E8, C4<000>;
+L_01021030 .concat [ 2 1 0 0], v01020320_0, C4<0>;
+L_01021088 .cmp/eq 3, L_01021030, C4<001>;
+L_010210E0 .concat [ 2 2 0 0], v01020320_0, C4<00>;
+L_01021298 .cmp/eq 4, L_010210E0, C4<0010>;
+L_01020F28 .functor MUXZ 1, C4<z>, L_01053FA0, L_01021298, C4<>;
+L_01020F80 .functor MUXZ 1, L_01020F28, L_01053F68, L_01021088, C4<>;
+L_01053858 .functor MUXZ 1, L_01020F80, L_01021138, L_01021240, C4<>;
+L_010538B0 .concat [ 2 1 0 0], v01020320_0, C4<0>;
+L_01053960 .cmp/eq 3, L_010538B0, C4<000>;
+L_01053B70 .functor MUXZ 1, C4<z>, L_01020530, L_01053960, C4<>;
+    .scope S_01013E80;
+T_0 ;
+    %set/v v010204D8_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_01013E80;
+T_1 ;
+    %delay 10, 0;
+    %vpi_call 2 23 "$monitor", "| %b | %b |   %b  | %b |    %b   |   %b   |", v01020CC0_0, v01020C68_0, v010204D8_0, v01020320_0, v01020378_0, v010208A0_0;
+    %end;
+    .thread T_1;
+    .scope S_01013E80;
+T_2 ;
+    %vpi_call 2 29 "$display", "\012|-----One Bit Addition Test----------|";
+    %vpi_call 2 30 "$display", "| a | b | c_in | op | result | c_out |";
+    %vpi_call 2 31 "$display", "|---|---|------|----|--------|-------|";
+    %delay 50, 0;
+    %set/v v010204D8_0, 0, 1;
+    %set/v v01020320_0, 0, 2;
+    %set/v v01020CC0_0, 0, 1;
+    %set/v v01020C68_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 0, 1;
+    %set/v v01020C68_0, 1, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 1, 1;
+    %set/v v01020C68_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 1, 1;
+    %set/v v01020C68_0, 1, 1;
+    %delay 50, 0;
+    %set/v v010204D8_0, 1, 1;
+    %set/v v01020CC0_0, 0, 1;
+    %set/v v01020C68_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 0, 1;
+    %set/v v01020C68_0, 1, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 1, 1;
+    %set/v v01020C68_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 1, 1;
+    %set/v v01020C68_0, 1, 1;
+    %delay 50, 0;
+    %vpi_call 2 44 "$display", "\012|------One Bit AND Test--------------|";
+    %vpi_call 2 45 "$display", "| a | b | c_in | op | result | c_out |";
+    %vpi_call 2 46 "$display", "|---|---|------|----|--------|-------|";
+    %set/v v010204D8_0, 0, 1;
+    %movi 8, 1, 2;
+    %set/v v01020320_0, 8, 2;
+    %set/v v01020CC0_0, 0, 1;
+    %set/v v01020C68_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 0, 1;
+    %set/v v01020C68_0, 1, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 1, 1;
+    %set/v v01020C68_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 1, 1;
+    %set/v v01020C68_0, 1, 1;
+    %delay 50, 0;
+    %vpi_call 2 54 "$display", "\012|---------One Bit NOT Test-----------|";
+    %vpi_call 2 55 "$display", "| a | b | c_in | op | result | c_out |";
+    %vpi_call 2 56 "$display", "|---|---|------|----|--------|-------|";
+    %movi 8, 2, 2;
+    %set/v v01020320_0, 8, 2;
+    %set/v v01020C68_0, 0, 1;
+    %set/v v01020CC0_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 1, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 1, 1;
+    %delay 50, 0;
+    %vpi_call 2 64 "$display", "\012|---------High Impedance Test--------|";
+    %vpi_call 2 65 "$display", "| a | b | c_in | op | result | c_out |";
+    %vpi_call 2 66 "$display", "|---|---|------|----|--------|-------|";
+    %set/v v01020320_0, 1, 2;
+    %set/v v01020CC0_0, 0, 1;
+    %set/v v01020C68_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 1, 1;
+    %set/v v01020C68_0, 0, 1;
+    %delay 50, 0;
+    %set/v v01020CC0_0, 0, 1;
+    %set/v v01020C68_0, 1, 1;
+    %delay 50, 0;
+    %vpi_call 2 73 "$display", "\012|-----------END OF TEST--------------|";
+    %vpi_call 2 73 "$finish";
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "one_bit_ALU_tb.v";
+    "one_bit_ALU.v";
