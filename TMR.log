@@ -1,0 +1,121 @@
+VCD info: dumpfile tmr.vcd opened for output.
+
+	Batch 1 (seed: 0): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 10,          Errors with TMR: 0
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 1.1400%,   Error with TMR: 0.0200%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  57.0x
+-------------------------------------------------------
+
+
+	Batch 2 (seed: 10): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 9,          Errors with TMR: 1
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 0.9214%,   Error with TMR: 0.0702%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  13.1x
+-------------------------------------------------------
+
+
+	Batch 3 (seed: 200): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 9,          Errors with TMR: 0
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 0.9392%,   Error with TMR: 0.0207%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  45.4x
+-------------------------------------------------------
+
+
+	Batch 4 (seed: 3000): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 5,          Errors with TMR: 0
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 0.9194%,   Error with TMR: 0.0202%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  45.5x
+-------------------------------------------------------
+
+
+	Batch 5 (seed: 31415): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 11,          Errors with TMR: 0
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 1.0692%,   Error with TMR: 0.0602%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  17.8x
+-------------------------------------------------------
+
+
+	Batch 6 (seed: 27182): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 8,          Errors with TMR: 0
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 0.9807%,   Error with TMR: 0.0406%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  24.2x
+-------------------------------------------------------
+
+
+	Batch 7 (seed: 112358): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 1,          Errors with TMR: 0
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 0.8798%,   Error with TMR: 0.0504%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  17.5x
+-------------------------------------------------------
+
+
+	Batch 8 (seed: 628318): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 15,          Errors with TMR: 2
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 0.9188%,   Error with TMR: 0.0405%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  22.7x
+-------------------------------------------------------
+
+
+	Batch 9 (seed: 2): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 12,          Errors with TMR: 0
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 1.0892%,   Error with TMR: 0.0304%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  35.8x
+-------------------------------------------------------
+
+
+	Batch 10 (seed: 42): 
+-------------------------------------------------------
+Errors in first trial (1000 vectors):
+  Errors without TMR: 7,          Errors with TMR: 0
+-------------------------------------------------------
+Average error across 10 trials (%):     
+  Error without TMR: 1.0509%,   Error with TMR: 0.0203%
+-------------------------------------------------------
+Accuracy improvement using TMR:                  51.8x
+-------------------------------------------------------
+
